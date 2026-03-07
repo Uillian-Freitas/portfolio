@@ -1,3 +1,20 @@
+:root{
+    --background-color: #020617;
+    --surface-color: #020617;
+    --text-color: #22c55e;
+    --text-secondary: #4ade80;
+    --accent-color: #16a34a;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
 ul{
     list-style: none;
     display: flex;
@@ -14,10 +31,25 @@ a{
 nav{
     display: flex;
     justify-content: center;
+    color: var(--text-color);
+    transition: 0.3s;
+    letter-spacing: 1px;
+}
+
+nav a:visited{
+    color: var(--text-color);
+}
+
+nav a:hover{
+    color: #a7f3d0;
+    text-shadow: 0 0 8px #22c55e;
 }
 
 header{
     padding: 20px;
+    top: 0;
+    width: 100%;
+    
 }
 
 #home{
@@ -26,8 +58,57 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+    text-align: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 #home h1{
     font-size: 48px;
+    color: var(--text-color);
+    text-shadow: 0 0 10px #22c55e;
+    border-right: 3px solid #22c55e;
+    padding-right: 10px;
+    animation: blink 1s infinite;
+}
+
+#home a{
+    padding: 12px 24px;
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    color:  #020617;
+    box-shadow: 0 0 10px #16a34a;
+}
+
+#home a:hover{
+    background-color: var(--text-secondary);
+    box-shadow: 0 0 20px #22c55e;
+}
+
+#home p{
+    max-width: 600px;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+}
+
+#matrix{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+@keyframes blink {
+    0%{
+        border-color: #22c55e;
+    }
+    50%{
+        border-color: transparent;
+    }
+    100%{
+        border-color: #22c55e;
+    }
 }
