@@ -7,9 +7,24 @@ function type() {
         typingElement.textContent += text.charAt(index);
         index++;
         setTimeout(type, 100);
+    } else{
+        activateGlitch();
     }
+    }
+
+    function activateGlitch(){
+        const el = document.getElementById("typing");
+
+        el.classList.add("glitch");
+
+        el.setAttribute("data-text", el.textContent);
+
+        setTimeout(() => {
+            el.classList.remove("glitch")
+        },150);
     }
     type();
+
 
     const canvas = document.getElementById("matrix");
     const ctx = canvas.getContext("2d");
@@ -54,3 +69,86 @@ function type() {
             }
         }
     setInterval(draw, 33);
+
+    const terminalLines = [
+        {id: "whoami", text: "Uillian Freitas"},
+        {id: "role", text: "Desenvolvedor Full Stack Java" },
+        { id:"stack1", text:"HTML / CSS / JavaScript / React" },
+        { id:"stack2", text:"Java / Spring Boot" },
+        { id:"stack3", text:"Git / GitHub / Bootstrap / Sass" }
+    ];
+
+    function typeLine(element, text, index = 0) {
+        if(index < text.length){
+            element.textContent += text.charAt(index);
+
+            setTimeout(() => {
+                typeLine(element, text, index + 1);
+            }, 40)
+        }
+    }
+    
+    function startTerminal() {
+        let delay = 0;
+
+        terminalLines.forEach(line => {
+
+            const element = document.getElementById(line.id);
+
+            setTimeout(() => {
+                typeLine(element, line.text);
+            }, delay);
+            delay += 1200
+        });
+    }
+    const aboutSection = document.getElementById("about");
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting){
+                startTerminal();
+                observer.disconnect();
+            }
+        });
+    });
+    observer.observe(aboutSection);
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observerReveal = new IntersectionObserver((entries) => {
+
+        entries.forEach((entry, index) => {
+
+    if(entry.isIntersecting){
+
+        setTimeout(() => {
+            entry.target.classList.add("active");
+        }, index * 300);
+
+    }
+
+    });
+    });
+    reveals.forEach(el => observerReveal.observe(el));
+
+const projectText = "> PROJECT DATABASE...";
+const projectElement = document.getElementById("projects-typing");
+
+let projectIndex = 0;
+
+function typeProjects(){
+
+    if(projectIndex < projectText.length){
+
+        projectElement.textContent += projectText.charAt(projectIndex);
+        projectIndex++;
+
+        setTimeout(typeProjects, 70);
+
+    }
+
+}
+
+typeProjects();   
+    

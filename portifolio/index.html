@@ -25,7 +25,9 @@
     <main>
         <section id="home">
             
-            <h1 id="typing"></h1>
+            <h1 >
+                <span id="typing"></span>
+            </h1>
             <p>Desenvolvedor Full Stack Java</p>
             <p>Criando interfaces modernas e funcionais com HTML, CSS e JavaScript.</p>
             <a href="#projects">Ver Projetos</a>
@@ -34,9 +36,149 @@
 
         <section id="about">
             
+            <div class="terminal">
+
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            
+                <p class="cmd"> >whoami</p>
+            <p id="whoami" class="response"></p>
+            
+            <p class="cmd"> >role</p>
+            <p id="role" class="response"></p>
+            
+            <p class="cmd"> >stack --frontend</p>
+            <p id="stack1" class="response"></p>
+
+            <p class="cmd"> >stack --backend</p>
+            <p id="stack2" class="response"></p>
+
+            <p class="cmd"> >stack --tools</p>
+            <p id="stack3" class="response"></p>
+            
+            </div>    
+            
         </section>
 
         <section id="projects">
+
+            <h2 class="section-title">
+                <span id="projects-typing"></span>
+                <span id="cursor"></span>
+            </h2>
+
+            <div class="projects-container">
+            
+            <div class="project-featured reveal">
+
+            <div class="project-image">
+                <img src="harley-stream.png" alt="Harley Stream preview">
+            </div>
+            
+            <div class="project-content">
+                <h3>Harley Stream <span class="featured">⭐ Destaque</span></h3>
+
+                <p>
+                Harley Stream
+
+                Landing page temática inspirada na estética caótica da personagem Harley Quinn.
+                O projeto explora organização de estilos com SCSS, interações em JavaScript e construção de layout responsivo com Flexbox e Grid.
+                <br>
+                A interface inclui navegação por abas, cards interativos com trailers em modal, seção FAQ com acordeão e adaptação completa para mobile, tablet e desktop.
+                </p>
+
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>JavaScript</span>
+                    <span>SCSS</span>
+                    <span>Gulp</span>
+                    <span>Flexbox</span>
+                    <span>Grid</span>
+                </div>
+
+                <div class="project-link">
+                <a href="https://harley-stream.vercel.app/" target="_blank">Ver Projeto</a> 
+                <a href="https://github.com/Uillian-Freitas/Harley-Stream" target="_blank">GitHub</a> 
+                </div>
+            </div>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card reveal">
+                    <div class="project-image">
+                    <img src="calculadora-imc.png" alt="Calculadora IMC preview">
+                    </div>
+                    <h3>Calculadora IMC</h3>
+                    <p>
+                    Aplicação desenvolvida em React com Vite para cálculo de IMC.
+                    O projeto explora criação de componentes, gerenciamento de estado e atualização dinâmica da interface com JavaScript.
+                    </p>
+                
+
+                <div class="project-tech">
+                    <span>React</span>
+                    <span>Vite</span>
+                    <span>JavaScript</span>
+                    <span>CSS Modules</span>
+                    <span>ESLint</span>
+                </div>
+
+                <div class="project-link">
+                <a href="https://calculadora-imc-react-orcin.vercel.app/" target="_blank">Calculadora de IMC</a> 
+                <a href="https://github.com/Uillian-Freitas/calculadora-imc-react" target="_blank">GitHub</a> 
+                </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-image">
+                    <img src="pagina de evento.png" alt="Pagina de Evento preview">
+                    </div>
+                <h3>Landing Page Evento</h3>
+                <p>Landing page desenvolvida com HTML, SCSS e JavaScript utilizando Parcel como bundler.
+                Inclui contagem regressiva dinâmica, animações com AOS.js e layout responsivo construído com Flexbox e arquitetura modular de estilos.</p>
+                
+
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>JavaScript</span>
+                    <span>SCSS</span>
+                    <span>Parcel</span>
+                    <span>AOS</span>
+                </div>
+
+                <div class="project-link">
+                <a href="https://data-aniversario-evento.vercel.app/" target="_blank">Ver Projeto</a> 
+                <a href="https://github.com/Uillian-Freitas/data-aniversario-evento" target="_blank">GitHub</a> 
+                </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-image">
+                    <img src="calculadora.png" alt="calculadora preview">
+                    </div>
+                <h3>Calculadora Vue</h3>
+                <p>Calculadora desenvolvida com Vue 3 utilizando Composition API.
+                O projeto explora reatividade, componentização e comunicação entre componentes para construção de uma interface interativa de cálculo.</p>
+                
+
+                <div class="project-tech">
+                    <span>Vue 3</span>
+                    <span>Composition API</span>
+                    <span>Vite</span>
+                    <span>JavaScript</span>
+                    <span>CSS</span>
+                </div>
+
+                <div class="project-link">
+                <a href="https://calculadora-com-vue-eight.vercel.app/" target="_blank">Ver Projeto</a> 
+                <a href="https://github.com/Uillian-Freitas/calculadora-com-vue" target="_blank">GitHub</a> 
+                </div>
+                </div>
+            </div>
+            </div>
             
         </section>
 
