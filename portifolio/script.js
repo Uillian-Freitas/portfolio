@@ -31,6 +31,13 @@ function type() {
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+
+    window.addEventListener("resize", () => {
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+});
     
     const letters = "アカサタナハマヤラワ0123456789";
 
@@ -152,3 +159,36 @@ function typeProjects(){
 
 typeProjects();   
     
+const contactText = "> canal de contato";
+const contactElement = document.getElementById("contact-typing");
+
+let contactIndex = 0;
+
+function typeContact(){
+
+    if(contactIndex < contactText.length){
+
+        contactElement.textContent += contactText.charAt(contactIndex);
+        contactIndex++;
+
+        setTimeout(typeContact,70);
+    }
+}
+typeContact();
+
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu ul");
+
+toggle.addEventListener("click", () => {
+
+menu.classList.toggle("active");
+toggle.classList.toggle("active");
+
+});
+
+document.querySelectorAll(".menu a").forEach(link=>{
+link.addEventListener("click", ()=>{
+menu.classList.remove("active");
+toggle.classList.remove("active");
+});
+});
